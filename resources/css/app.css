@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
+
+/* Tailwind v4 tidak lagi punya opsi darkMode: 'class' di config JS.
+   Baris ini yang membuat semua kelas dark: aktif berdasarkan class
+   "dark" pada <html> (ditoggle lewat Alpine + localStorage di
+   layouts/app.blade.php), bukan otomatis mengikuti OS. */
+@custom-variant dark (&:where(.dark, .dark *));
